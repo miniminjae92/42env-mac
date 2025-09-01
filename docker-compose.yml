@@ -14,6 +14,7 @@ services:
       - ~/42-env/.tmux.conf:/home/minjkang/.tmux.conf:cached
       - ~/42-env/.config/nvim/bin/pbcopy:/usr/local/bin/pbcopy:ro
       - ~/42-env/.config/nvim/bin/pbpaste:/usr/local/bin/pbpaste:ro
+      - ~/.ssh:/home/minjkang/.ssh:ro
       # X11 Forwarding
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
