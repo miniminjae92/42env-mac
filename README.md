@@ -43,6 +43,9 @@
 ### 2. 환경 구축
 
 프로젝트 디렉토리로 이동하여 다음 명령어를 실행합니다.
+```
+docker build -t 42env:latest .
+```
 
 ```
 docker-compose up -d --build
@@ -52,6 +55,10 @@ docker-compose up -d --build
 
 ```
 docker-compose build --no-cache
+```
+
+```
+docker-compose exec 42env zsh
 ```
 
 컨테이너를 종료하려면:
