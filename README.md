@@ -111,6 +111,12 @@ nvim ./c_formatter_42/formatters/clang_format.py
 pip3 install -e .
 ```
 
+- Set up norminette
+
+```
+python3 -m pip install -U norminette
+```
+
 ### Tmux (`.tmux.conf`)
 
 - **프리픽스**: `C-a`
