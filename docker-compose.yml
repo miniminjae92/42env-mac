@@ -1,7 +1,11 @@
 services:
   42env:
     image: 42env:latest
-    build: .
+    build:
+      context: .
+      args:
+        USER_UID: ${UID}
+        USER_GID: ${GID}
     container_name: 42gs
     tty: true
     stdin_open: true
