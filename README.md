@@ -11,6 +11,7 @@
 - **터미널 환경**: `Zsh`, `Oh My Zsh`, `Powerlevel10k` 테마를 통해 시각적으로 풍부하고 기능적인 셸 환경을 제공합니다.
 
 - **편집기**: `Neovim`을 `lazy.nvim` 플러그인 매니저를 사용하여 강력하게 커스터마이징했습니다.
+
   - `LSP` (Language Server Protocol) 및 `DAP` (Debug Adapter Protocol)을 통한 지능적인 코드 편집 및 디버깅.
 
   - `nvim-tree`를 사용한 파일 탐색기.
@@ -34,6 +35,7 @@
 - [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) 설치
 
 - [XQuartz](https://www.xquartz.org/) 설치 및 설정
+
   - `XQuartz`의 `Preferences` > `Security` 탭에서 `Allow connections from network clients`를 활성화합니다.
 
   - 터미널에서 `xhost +localhost` 명령어를 실행하여 로컬 연결을 허용합니다.
@@ -41,6 +43,10 @@
 ### 2. 환경 구축
 
 프로젝트 디렉토리로 이동하여 다음 명령어를 실행합니다.
+
+```
+docker build --build-arg USER_UID=$(id -u) -t 42env:latest .
+```
 
 ```
 docker build -t 42env:latest .
@@ -73,6 +79,7 @@ docker-compose down
 - **리더 키**: `<Space>`
 
 - **주요 키맵**:
+
   - `<leader>ee`: 파일 탐색기 토글
 
   - `<leader>ff`: 파일 찾기 (Telescope)
@@ -109,6 +116,7 @@ pip3 install -e .
 - **프리픽스**: `C-a`
 
 - **주요 키맵**:
+
   - `<prefix> |`: 수평 패널 분할
 
   - `<prefix> -`: 수직 패널 분할
@@ -124,6 +132,7 @@ pip3 install -e .
 - **플러그인**: `zsh-autosuggestions`, `zsh-syntax-highlighting`
 
 - **주요 별칭(Alias)**:
+
   - `vim`: `nvim`
 
   - `cd`: `z` (zoxide)
