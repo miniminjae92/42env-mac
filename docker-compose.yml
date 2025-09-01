@@ -8,10 +8,10 @@ services:
     volumes:
       - ~/projects_my/42cursus:/home/minjkang/42cursus:cached
       - ./.config/nvim:/home/minjkang/.config/nvim:cached
-      - ./.zshrc:/home/minjkang/.zshrc:cached
-      - ./.tmux.conf:/home/minjkang/.tmux.conf:cached
       - ./.config/nvim/bin/pbcopy:/usr/local/bin/pbcopy:ro
       - ./.config/nvim/bin/pbpaste:/usr/local/bin/pbpaste:ro
+      - .zshrc:/home/minjkang/.zshrc:cached
+      - .tmux.conf:/home/minjkang/.tmux.conf:cached
       - ~/.ssh:/home/minjkang/.ssh:ro
       # X11 Forwarding
       - /tmp/.X11-unix:/tmp/.X11-unix
