@@ -92,7 +92,7 @@ git clone https://github.com/achedeuzot/c_formatter_42.git && \
 cd c_formatter_42
 ```
 
-> Code update
+> Code update  
 > process = subprocess.Popen( ['/usr/bin/clang-format-14', '-style=file'], ... )
 
 ### Tmux (`.tmux.conf`)
