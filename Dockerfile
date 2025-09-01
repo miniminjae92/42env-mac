@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     zsh gdb valgrind sudo tmux \
     libbsd-dev libx11-dev libxext-dev libssl-dev \
     python3-pip xclip bat fonts-powerline locales clangd fd-find ripgrep && \
-    pip3 install c-formatter-42 && \
     # Install Node.js 20 LTS and npm
     curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && \
     sudo apt-get install -y nodejs && \
@@ -62,18 +61,8 @@ RUN git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Copy user config files
-# COPY ./.config ~/.config
-# COPY ./.zshrc ~/.zshrc
-# COPY ./.tmux.conf ~/.tmux.conf
-# COPY ./c_formatter_42 .local/bin/c_formatter_42
 COPY ./.vimrc .vimrc
 COPY ./.p10k.zsh .p10k.zsh
-COPY --chown=minjkang ./c_formatter_42 .local/bin/c_formatter_42
-
-USER root
-RUN sed -i '1s|.*|#!/usr/bin/env python3|' /home/minjkang/.local/bin/c_formatter_42
-# RUN chmod +x /home/minjkang/.local/bin/c_formatter_42
-USER $USERNAME
 
 RUN echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 
