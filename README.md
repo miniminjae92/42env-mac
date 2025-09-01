@@ -97,7 +97,7 @@ sudo apt update && \
 sudo apt install clang-format && \
 git clone https://github.com/cacharle/c_formatter_42 && \
 cd c_formatter_42 && \
-nvim c_formatter_42/c_formatter_42/formatters/clang_format.py
+nvim ./c_formatter_42/formatters/clang_format.py
 ```
 
 > Code update  
