@@ -30,10 +30,14 @@ RUN apt-get update && apt-get install -y \
     locale-gen en_US.UTF-8 && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+
 # Create a user
 ARG USERNAME=minjkang
-RUN getent group staff || groupadd -g 20 staff && \
-    useradd -m -s /bin/zsh -u 501 -g 20 $USERNAME && \
+ARG USER_UID=501
+ARG USER_GID=20
+
+RUN getent group staff || groupadd -g ${USER_GID} staff && \
+    useradd -m -s /bin/zsh -u ${USER_UID} -g ${USER_GID} $USERNAME && \
     echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 USER $USERNAME
