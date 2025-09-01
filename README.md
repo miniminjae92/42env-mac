@@ -89,11 +89,22 @@ docker-compose down
 sudo apt update && \
 sudo apt install clang-format && \
 git clone https://github.com/cacharle/c_formatter_42 && \
-cd c_formatter_42
+cd c_formatter_42 && \
+cd c_formatter_42 && \
+cd formatters && \
+nvim clang_format.py
 ```
 
 > Code update  
-> process = subprocess.Popen( ['/usr/bin/clang-format-14', '-style=file'], ... )
+> process = subprocess.Popen( ["/usr/bin/clang-format-14", "-style=file"], ... )
+
+```
+"/usr/bin/clang-format-14"
+```
+
+```
+pip3 install -e .
+```
 
 ### Tmux (`.tmux.conf`)
 
