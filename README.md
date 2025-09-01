@@ -88,7 +88,7 @@ docker-compose down
 ```
 sudo apt update && \
 sudo apt install clang-format && \
-git clone https://github.com/achedeuzot/c_formatter_42.git && \
+git clone https://github.com/cacharle/c_formatter_42 && \
 cd c_formatter_42
 ```
 
