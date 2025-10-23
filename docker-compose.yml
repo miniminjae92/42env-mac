@@ -6,7 +6,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ~/projects_my/42cursus:/home/minjkang/42cursus:cached
+      - ~/projects/co/42cursus:/home/minjkang/42cursus:cached
       - ./.config/nvim:/home/minjkang/.config/nvim:cached
       - ./.zshrc:/home/minjkang/.zshrc:cached
       - ./.tmux.conf:/home/minjkang/.tmux.conf:cached
@@ -17,6 +17,4 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
       - DISPLAY=host.docker.internal:0
-    env_file:
-      - .gemini.env
     working_dir: /home/minjkang
